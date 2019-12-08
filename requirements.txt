@@ -1,0 +1,8 @@
+jupyter==1.0.0
+aif360==0.2.2
+auto-sklearn==0.5.2
+pyrfr==0.7.4
+BlackBoxAuditing==0.1.54
+tqdm==4.40.0
+cvxpy==1.0.25
+numba==0.46.0
