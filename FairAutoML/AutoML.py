@@ -13,7 +13,7 @@ from aif360.datasets import StandardDataset
 from aif360.metrics.classification_metric import ClassificationMetric
 from aif360.metrics.binary_label_dataset_metric import BinaryLabelDatasetMetric
 from tqdm import tqdm
-from IPython.display import Markdown, display
+# from IPython.display import Markdown, display
 
 class FairAutoML():
     def __init__(self, input_columns, label_name, favorable_classes, 
@@ -126,7 +126,7 @@ class FairAutoML():
                                                      unprivileged_groups=self.unprivileged_groups,
                                                      privileged_groups=self.privileged_groups)
         
-        display(Markdown("#### Original training dataset"))
+        # display(Markdown("#### Original training dataset"))
         no_preproc = precheck_data_fairness(dataset_metric, dataset_metric_threshold, metric_orig_train)
         # save classfier_metric for plot function.
         self.classifier_metric = classifier_metric  
@@ -312,7 +312,7 @@ class FairAutoML():
                                           self.unprivileged_groups, self.privileged_groups, disp=True)
         if verbose:
             print("Optimal classification threshold (after fairness processing) = %.4f" % best_ultimate_thres)
-            display(pd.DataFrame(metric_test_aft, columns=metric_test_aft.keys(), index=[0]))
+            # display(pd.DataFrame(metric_test_aft, columns=metric_test_aft.keys(), index=[0]))
             
         return metric_test_aft
 
